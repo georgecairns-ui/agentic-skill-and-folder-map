@@ -1,5 +1,5 @@
 /*
-  SKILL MAP OS: layout and pieces (the shell, top bar, panel and pop-ups are copied from Task List OS so every tool matches; this tool's own parts are at the end)
+  AGENTIC SKILL AND FOLDER MAP: layout and pieces (the shell, top bar, panel and pop-ups are copied from Agentic Task List so every tool matches; this tool's own parts are at the end)
   Colours, fonts and spacing all come from shared/theme.css.
 */
 
@@ -190,7 +190,7 @@ body.has-drawer .main { margin-right: 0; }
 
 
 /* ============================================================
-   SKILL MAP OS: the parts that are this tool's own
+   AGENTIC SKILL AND FOLDER MAP: the parts that are this tool's own
    ============================================================ */
 
 .view[data-view="map"] { overflow: auto; }

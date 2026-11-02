@@ -7,18 +7,18 @@ While the repositories are public, install and updates use a plain download with
 Replaces the paragraph that starts "Copy it as a plain folder" and ends with the line "If the download fails, check their internet connection and run the line again. Don't try another way in."
 
 ```markdown
-Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Skill and Folder Map OS is private: Get AI Powers gives access by inviting their GitHub account, so the copy uses their own GitHub sign-in.
+Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Agentic Skill and Folder Map is private: Get AI Powers gives access by inviting their GitHub account, so the copy uses their own GitHub sign-in.
   1. Check they're signed in: `gh auth status`. If they're not, give them the one line `gh auth login -h github.com -p https -w`, say it opens GitHub in their browser to approve this computer, and wait. If `gh` isn't installed, help them install it first (Mac: `brew install gh`, or the installer from cli.github.com; Windows: `winget install --id GitHub.cli -e`, then open a new PowerShell window).
   2. Copy it with the line for their computer:
-     - Mac: `D="$HOME/Documents/Skill and Folder Map OS"; mkdir -p "$D/setup/as-installed" && curl -fsSL -H "Authorization: Bearer $(gh auth token)" -o "$D/setup/as-installed/skill-and-folder-map-os.tar.gz" https://api.github.com/repos/georgecairns-ui/skill-and-folder-map-os/tarball/main && tar -xzf "$D/setup/as-installed/skill-and-folder-map-os.tar.gz" --strip-components 1 -C "$D"`
-     - Windows (PowerShell): `$d = "$HOME\Documents\Skill and Folder Map OS"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -H "Authorization: Bearer $(gh auth token)" -o "$d\setup\as-installed\skill-and-folder-map-os.tar.gz" https://api.github.com/repos/georgecairns-ui/skill-and-folder-map-os/tarball/main; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\skill-and-folder-map-os.tar.gz" --strip-components 1 -C "$d" }`
-  3. If it stops with `error: 404`, their GitHub account can't see Skill and Folder Map OS yet: they haven't accepted the invitation from Get AI Powers, or they're signed in to a different GitHub account (`gh auth status` names it). Ask them to accept the invitation from the email GitHub sent them (it's also at github.com/notifications), then run the line again. If they never had an invitation, tell them to ask Get AI Powers. With `error: 401`, the sign-in has expired: ask them to run `gh auth login -h github.com -p https -w` again. Don't try another way in.
+     - Mac: `D="$HOME/Documents/Agentic Skill and Folder Map"; mkdir -p "$D/setup/as-installed" && curl -fsSL -H "Authorization: Bearer $(gh auth token)" -o "$D/setup/as-installed/agentic-skill-and-folder-map.tar.gz" https://api.github.com/repos/georgecairns-ui/agentic-skill-and-folder-map/tarball/main && tar -xzf "$D/setup/as-installed/agentic-skill-and-folder-map.tar.gz" --strip-components 1 -C "$D"`
+     - Windows (PowerShell): `$d = "$HOME\Documents\Agentic Skill and Folder Map"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -H "Authorization: Bearer $(gh auth token)" -o "$d\setup\as-installed\agentic-skill-and-folder-map.tar.gz" https://api.github.com/repos/georgecairns-ui/agentic-skill-and-folder-map/tarball/main; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\agentic-skill-and-folder-map.tar.gz" --strip-components 1 -C "$d" }`
+  3. If it stops with `error: 404`, their GitHub account can't see Agentic Skill and Folder Map yet: they haven't accepted the invitation from Get AI Powers, or they're signed in to a different GitHub account (`gh auth status` names it). Ask them to accept the invitation from the email GitHub sent them (it's also at github.com/notifications), then run the line again. If they never had an invitation, tell them to ask Get AI Powers. With `error: 401`, the sign-in has expired: ask them to run `gh auth login -h github.com -p https -w` again. Don't try another way in.
 ```
 
 ## START-HERE.md: the "already copied it another way" paragraph (v12)
 
 ```markdown
-  If you've already copied it another way (for example with `git clone`, or into a different folder), that's fine: use that folder. Then give them the one line to open it, `cd ~/Documents/"Skill and Folder Map OS" && claude` (in the Claude desktop app: open the Code tab and choose that folder), tell them to pick "Yes, I trust this folder", then type `/setup`. Stop there; don't start the setup from the wrong folder. Follow this file, then the step files in `setup/`, in order.
+  If you've already copied it another way (for example with `git clone`, or into a different folder), that's fine: use that folder. Then give them the one line to open it, `cd ~/Documents/"Agentic Skill and Folder Map" && claude` (in the Claude desktop app: open the Code tab and choose that folder), tell them to pick "Yes, I trust this folder", then type `/setup`. Stop there; don't start the setup from the wrong folder. Follow this file, then the step files in `setup/`, in order.
 ```
 
 ## get-updates, step 2 (v12): the sign-in and the downloads
@@ -28,7 +28,7 @@ Replaces the plain download in `.claude/skills/get-updates/SKILL.md` step 2: the
 ```markdown
 **Their GitHub sign-in.** Every tool is private: Get AI Powers gives access by inviting the person's GitHub account, and every download uses their own sign-in. Check it first with `gh auth status`. If they are not signed in, give them the one line `gh auth login -h github.com -p https -w`, say it opens GitHub in their browser to approve this computer, and wait. If `gh` is not installed, help them install it (Mac: `brew install gh`, or the installer from cli.github.com; Windows: `winget install --id GitHub.cli -e`, then open a new PowerShell window).
 
-**The downloads.** For each tool in `apps/installed.json`, find its `repository` in the catalogue (for the whole toolkit, `small-business-toolkit`, once), and run, with `<T>` the path you noted:
+**The downloads.** For each tool in `apps/installed.json`, find its `repository` in the catalogue (for the whole toolkit, `agentic-command-centre`, once), and run, with `<T>` the path you noted:
 
 - Mac: `T="<T>"; mkdir -p "$T/new/<repository>" && curl -fsSL -H "Authorization: Bearer $(gh auth token)" -o "$T/new/<repository>.tar.gz" https://api.github.com/repos/georgecairns-ui/<repository>/tarball/main && tar -xzf "$T/new/<repository>.tar.gz" --strip-components 1 -C "$T/new/<repository>"`
 - Windows (PowerShell): `$T = "<T>"; New-Item -ItemType Directory -Force "$T\new\<repository>" | Out-Null; curl.exe -fsSL -H "Authorization: Bearer $(gh auth token)" -o "$T\new\<repository>.tar.gz" https://api.github.com/repos/georgecairns-ui/<repository>/tarball/main; if ($LASTEXITCODE -eq 0) { tar -xzf "$T\new\<repository>.tar.gz" --strip-components 1 -C "$T\new\<repository>" }`
@@ -46,15 +46,15 @@ Do not try another way in.
 The item in "What you need":
 
 ```markdown
-- **Access to Skill and Folder Map OS.** It's private: Get AI Powers invites your GitHub account. Accept the invitation from the email GitHub sends you. (No GitHub account? Make a free one at github.com and send Get AI Powers your username.)
+- **Access to Agentic Skill and Folder Map.** It's private: Get AI Powers invites your GitHub account. Accept the invitation from the email GitHub sends you. (No GitHub account? Make a free one at github.com and send Get AI Powers your username.)
 ```
 
 The prompt in "Get started", with the line after it and the note for Claude:
 
 ```markdown
-> Copy Skill and Folder Map OS from https://github.com/georgecairns-ui/skill-and-folder-map-os into a folder called "Skill and Folder Map OS" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up. Help me sign in to GitHub first if I need to.
+> Copy Agentic Skill and Folder Map from https://github.com/georgecairns-ui/agentic-skill-and-folder-map into a folder called "Agentic Skill and Folder Map" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up. Help me sign in to GitHub first if I need to.
 
    Claude checks you're signed in to GitHub (if not, it gives you one line that opens GitHub in your browser to approve this computer), copies everything onto your computer and gives you one line to open the new folder. In the desktop app, you choose the folder instead.
 
-   *For Claude, if this README is all you have:* the copy steps are in START-HERE.md. Read it with the person's GitHub sign-in, `gh api repos/georgecairns-ui/skill-and-folder-map-os/contents/START-HERE.md -H "Accept: application/vnd.github.raw"`, and follow its copy steps for this computer (Mac or Windows). They check the GitHub sign-in with `gh`, download the kit as a plain folder with `curl -fsSL` and unpack it with `tar`, and keep the download in `setup/as-installed/`. Don't use git.
+   *For Claude, if this README is all you have:* the copy steps are in START-HERE.md. Read it with the person's GitHub sign-in, `gh api repos/georgecairns-ui/agentic-skill-and-folder-map/contents/START-HERE.md -H "Accept: application/vnd.github.raw"`, and follow its copy steps for this computer (Mac or Windows). They check the GitHub sign-in with `gh`, download the kit as a plain folder with `curl -fsSL` and unpack it with `tar`, and keep the download in `setup/as-installed/`. Don't use git.
 ```

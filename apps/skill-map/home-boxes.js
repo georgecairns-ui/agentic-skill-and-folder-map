@@ -1,9 +1,9 @@
 /*
-  SKILL MAP OS ON HOME: the boxes this tool adds to the Home dashboard
+  AGENTIC SKILL AND FOLDER MAP ON HOME: the boxes this tool adds to the Home dashboard
   --------------------------------------------------------------------
   Loaded by apps/home/home.js after app/model.js (see "home" in menu.json).
   It reads the same map file as the app itself, through the same shared store. On its own, Skill Map
-  OS's boxes start switched on. With Task List OS in the folder they start switched off (the person
+  OS's boxes start switched on. With Agentic Task List in the folder they start switched off (the person
   turns them on in Home's list), so attaching never changes someone's Home.
 */
 (function () {
@@ -15,7 +15,7 @@
   const PAGE = "../skill-map/#";
   let data = null;
 
-  // Boxes start switched on only when Skill and Folder Map OS is on its own. When Task List OS is in the folder
+  // Boxes start switched on only when Agentic Skill and Folder Map is on its own. When Agentic Task List is in the folder
   // (its Home scripts load first and set window.TL), they start off, so attaching never changes
   // someone's Home. Home reads this once, when it first builds the layout.
   function startOn() { return !window.TL; }
@@ -25,7 +25,7 @@
 
   // ---------- The boxes ----------
   function skills() {
-    if (M.notSetUp(data)) return '<div class="hbox__setup"><p><strong>Let’s map your skills.</strong> In the Claude desktop app, open the Code tab in your Skill and Folder Map OS folder and type <code>/setup</code>, or just say “Scan my skills”. Claude finds your skills and draws them as a map.</p></div>';
+    if (M.notSetUp(data)) return '<div class="hbox__setup"><p><strong>Let’s map your skills.</strong> In the Claude desktop app, open the Code tab in your Agentic Skill and Folder Map folder and type <code>/setup</code>, or just say “Scan my skills”. Claude finds your skills and draws them as a map.</p></div>';
     const n = M.numbers(data);
     return '<p class="hstat"><span class="hstat__num">' + n.total + '</span><span class="hstat__label">' + (n.total === 1 ? "skill" : "skills") + " mapped, " + n.used90 + " used in the last " + M.usageDays(data) + " days</span></p>" +
       '<p class="hbox__more">' + esc(M.scanLabel(data)) + ".</p>";

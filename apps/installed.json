@@ -2,7 +2,7 @@
   "tools": [
     {
       "id": "skill-map",
-      "name": "Skill and Folder Map OS",
+      "name": "Agentic Skill and Folder Map",
       "app": "apps/skill-map/",
       "dataFiles": [
         "apps/skill-map/data/skillmap.json",

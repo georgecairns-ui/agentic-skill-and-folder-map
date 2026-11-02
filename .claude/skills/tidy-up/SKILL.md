@@ -1,6 +1,6 @@
 ---
 name: tidy-up
-description: Does the tidying the person asked for with a Fix button in Skill and Folder Map OS - moves old or duplicate files into a "Tidied by Claude" folder, gives untidy files clearer names, sorts a crowded folder into sub-folders, retires unused skills into an archive folder, or undoes a tidy-up. Everything is a move, never a delete, and every tidy-up can be undone. Use when they press a Fix button, type /tidy-up, or say "tidy up what I asked for", "do the clean-up", "fix those", "undo that tidy-up".
+description: Does the tidying the person asked for with a Fix button in Agentic Skill and Folder Map - moves old or duplicate files into a "Tidied by Claude" folder, gives untidy files clearer names, sorts a crowded folder into sub-folders, retires unused skills into an archive folder, or undoes a tidy-up. Everything is a move, never a delete, and every tidy-up can be undone. Use when they press a Fix button, type /tidy-up, or say "tidy up what I asked for", "do the clean-up", "fix those", "undo that tidy-up".
 ---
 
 # Tidy up

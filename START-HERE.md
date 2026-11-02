@@ -4,11 +4,11 @@
 
 ---
 
-**Claude, this file is for you.** The person you work for has copied Skill and Folder Map OS onto their computer and wants it set up.
+**Claude, this file is for you.** The person you work for has copied Agentic Skill and Folder Map onto their computer and wants it set up.
 
-**If you've only just copied it for them** (you're running in a different folder, such as their home or Documents folder): setup must run from inside the Skill and Folder Map OS folder, because that's where your skills, permissions and the map live. Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Use the line for their computer:
-  - Mac: `D="$HOME/Documents/Skill and Folder Map OS"; mkdir -p "$D/setup/as-installed" && curl -fsSL -o "$D/setup/as-installed/skill-and-folder-map-os.tar.gz" https://github.com/georgecairns-ui/skill-and-folder-map-os/archive/refs/heads/main.tar.gz && tar -xzf "$D/setup/as-installed/skill-and-folder-map-os.tar.gz" --strip-components 1 -C "$D"`
-  - Windows (PowerShell): `$d = "$HOME\Documents\Skill and Folder Map OS"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -o "$d\setup\as-installed\skill-and-folder-map-os.tar.gz" https://github.com/georgecairns-ui/skill-and-folder-map-os/archive/refs/heads/main.tar.gz; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\skill-and-folder-map-os.tar.gz" --strip-components 1 -C "$d" }`
+**If you've only just copied it for them** (you're running in a different folder, such as their home or Documents folder): setup must run from inside the Agentic Skill and Folder Map folder, because that's where your skills, permissions and the map live. Copy it as a plain folder, so it's theirs alone and not linked to the copy online. Use the line for their computer:
+  - Mac: `D="$HOME/Documents/Agentic Skill and Folder Map"; mkdir -p "$D/setup/as-installed" && curl -fsSL -o "$D/setup/as-installed/agentic-skill-and-folder-map.tar.gz" https://github.com/georgecairns-ui/agentic-skill-and-folder-map/archive/refs/heads/main.tar.gz && tar -xzf "$D/setup/as-installed/agentic-skill-and-folder-map.tar.gz" --strip-components 1 -C "$D"`
+  - Windows (PowerShell): `$d = "$HOME\Documents\Agentic Skill and Folder Map"; New-Item -ItemType Directory -Force "$d\setup\as-installed" | Out-Null; curl.exe -fsSL -o "$d\setup\as-installed\agentic-skill-and-folder-map.tar.gz" https://github.com/georgecairns-ui/agentic-skill-and-folder-map/archive/refs/heads/main.tar.gz; if ($LASTEXITCODE -eq 0) { tar -xzf "$d\setup\as-installed\agentic-skill-and-folder-map.tar.gz" --strip-components 1 -C "$d" }`
 
   If the download fails, check their internet connection and run the line again. Don't try another way in.
 
@@ -16,7 +16,7 @@
 
   If you've already copied it another way (for example with `git clone`, or into a different folder), that's fine: use that folder. Then give them the steps to open it: in the Claude desktop app, open the Code tab, choose that folder, pick "Yes, I trust this folder", then type `/setup`. Stop there; don't start the setup from the wrong folder. Follow this file, then the step files in `setup/`, in order.
 
-## What Skill and Folder Map OS is
+## What Agentic Skill and Folder Map is
 
 Two maps on one app, run by you: one of every skill and command Claude can use on their computer, one of the folders and files they choose to map.
 
@@ -28,7 +28,7 @@ Two maps on one app, run by you: one of every skill and command Claude can use o
 - You **suggest first**: a name used twice, a skill gone quiet, descriptions that overlap, a gap worth filling, a duplicate worth keeping one of, a folder worth tidying. Nothing changes until they press a Fix button and confirm. Then you tidy it with the `tidy-up` skill.
 - Scanning and reviewing **only read**. Tidying moves or renames, never deletes, only when they press a Fix button, and every tidy-up can be undone. Nothing you find is sent anywhere.
 - Everything lands in the **app**, which you run on their computer and they open at **http://localhost:4747**: Home (a dashboard), then the Skills | Files switch. Skills side: Map (the network), All skills (the same thing as a table), Overview (the counts), Gaps (what's missing) and Review (your suggestions). Files side: Map, All files (a sortable table), Overview (the counts), Clean-up (what needs tidying) and Review (your suggestions). Preferences sits under the cog on both sides.
-- There's no connection to email, calendar or call recordings to set up. Skill and Folder Map OS doesn't need any of them.
+- There's no connection to email, calendar or call recordings to set up. Agentic Skill and Folder Map doesn't need any of them.
 
 This folder is their workspace from now on: `context/` holds what you know about the business, `files/` their documents, `.claude/skills/` your saved know-how (they work as commands like `/scan-my-skills` and `/scan-my-folders`).
 
@@ -72,7 +72,7 @@ These don't bend, whatever is asked later.
 - **Never type a number into either map.** Counts, uses, sizes and totals always come from a scan, never from you guessing or rounding.
 - **Nothing is sent anywhere.** Both scans read this computer only. There's no account, no server and no upload.
 - **Folders: only the ones they chose.** The folder scan looks only in the folders listed in Preferences (Documents, Desktop and Downloads to start). It never opens a file, never reads what's inside one, never looks outside the folders they chose.
-- **No passwords or keys in chat or in this folder.** Skill and Folder Map OS doesn't need a sign-in to anything; it works on files already on their computer. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Money View OS and the Small Business Toolkit. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Money View OS.)
+- **No passwords or keys in chat or in this folder.** Agentic Skill and Folder Map doesn't need a sign-in to anything; it works on files already on their computer. Setup never uses keys. (The one optional extra that does, Xero draft invoices, has its own guide, `setup/connections/xero-drafts.md`, which comes with Agentic Money View and the Agentic Command Centre. It is only offered when they ask for it; if that file isn't in this folder, tell them it comes with Agentic Money View.)
 - **Be honest about what you can reach.** A skill used only in Cowork or on claude.ai doesn't show up in the scan, so it can look unused when it isn't. The folder map is a picture of the folders they chose, not their whole computer. Say so plainly rather than let them draw the wrong conclusion.
 - **Never delete their files.** Old things go to `files/99-archive`, and only for the files in this toolkit; the folder scan never deletes, moves or renames anything it finds, and a Fix button never deletes either: it moves things into a "Tidied by Claude" folder, and they can undo it.
 - **Keep private things private.** A skill's name and description are enough; don't copy what anyone typed into a skill, or the contents of any file the folder scan finds, into notes here.

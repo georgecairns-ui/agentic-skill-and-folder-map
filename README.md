@@ -1,12 +1,12 @@
-# Skill and Folder Map OS
+# Agentic Skill and Folder Map
 
 **See every skill and every folder you have, at a glance.** A free kit from [Get AI Powers](https://getaipowers.com), run by Claude.
 
-Skill and Folder Map OS draws 2 maps on one app, switched with a Skills | Files switch at the top. The **Skills** map finds every skill and command Claude can use on your computer and draws them as one map: Claude in the middle, a hub for each part of your business, a dot for each skill. The bigger the dot, the more it's been used in the last 90 days. The **Files** map looks through the folders you choose and draws them the same way: click a folder to go inside it, all the way down to a single file, and see what's taking up space, what's doubled up and what's worth tidying.
+Agentic Skill and Folder Map draws 2 maps on one app, switched with a Skills | Files switch at the top. The **Skills** map finds every skill and command Claude can use on your computer and draws them as one map: Claude in the middle, a hub for each part of your business, a dot for each skill. The bigger the dot, the more it's been used in the last 90 days. The **Files** map looks through the folders you choose and draws them the same way: click a folder to go inside it, all the way down to a single file, and see what's taking up space, what's doubled up and what's worth tidying.
 
-Scanning only reads. Skill and Folder Map OS looks at names, sizes and dates and never opens a file. It changes something only when you press a Fix button and confirm, it never deletes anything, every tidy-up can be undone, and nothing it finds leaves your computer.
+Scanning only reads. Agentic Skill and Folder Map looks at names, sizes and dates and never opens a file. It changes something only when you press a Fix button and confirm, it never deletes anything, every tidy-up can be undone, and nothing it finds leaves your computer.
 
-Skill and Folder Map OS is part of a toolkit of 7 free tools from Get AI Powers. The others (a task list, Pipeline OS, proposals and more) show in the app's menu, and Get AI Powers sets them up with you on a free call.
+Agentic Skill and Folder Map is part of a toolkit of 7 free tools from Get AI Powers. The others (a task list, Agentic Pipeline, proposals and more) show in the app's menu, and Get AI Powers sets them up with you on a free call.
 
 ## What happens when you type /setup
 
@@ -51,12 +51,12 @@ Both sides: **keep your choices** (scan again any time and it keeps the tags, gr
 
 1. **Open the Claude desktop app and choose the Code tab.** Any folder will do for this first step.
 2. **Ask Claude to fetch the kit.** Paste this:
-   > Copy Skill and Folder Map OS from https://github.com/georgecairns-ui/skill-and-folder-map-os into a folder called "Skill and Folder Map OS" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up.
+   > Copy Agentic Skill and Folder Map from https://github.com/georgecairns-ui/agentic-skill-and-folder-map into a folder called "Agentic Skill and Folder Map" in my Documents, using the copy line in its START-HERE.md (not git), then tell me how to open it and set it up.
 
    Claude copies everything onto your computer and tells you how to open the new folder. In the desktop app, you choose the folder in the Code tab.
 
-   *For Claude, if this README is all you have:* read START-HERE.md on the repository page at https://github.com/georgecairns-ui/skill-and-folder-map-os, then copy the folder with the Mac or Windows line in it.
-3. **In the Code tab, choose the Skill and Folder Map OS folder and pick "Yes, I trust this folder".** The first time, the app asks whether you trust the folder and warns that it pre-approves some permissions. Those permissions only let Claude run the scans, update your maps and your business notes, and start the app, without stopping to ask each time. It still can't edit a skill, a file or a folder, or send anything anywhere.
+   *For Claude, if this README is all you have:* read START-HERE.md on the repository page at https://github.com/georgecairns-ui/agentic-skill-and-folder-map, then copy the folder with the Mac or Windows line in it.
+3. **In the Code tab, choose the Agentic Skill and Folder Map folder and pick "Yes, I trust this folder".** The first time, the app asks whether you trust the folder and warns that it pre-approves some permissions. Those permissions only let Claude run the scans, update your maps and your business notes, and start the app, without stopping to ask each time. It still can't edit a skill, a file or a folder, or send anything anywhere.
 4. **Type `/setup`.**
 
 Then it opens your map and gives you its link, **http://localhost:4747**. Bookmark it.
@@ -76,7 +76,7 @@ Then it opens your map and gives you its link, **http://localhost:4747**. Bookma
 
 ## Your information
 
-Your maps live in this folder on your computer, in 3 files (the 2 maps, and a note of what has been tidied). Claude reads your `.claude` folder, your installed plugins and this kit's own skills to build the skills map, and the folders you choose to build the folder map; scanning never edits, moves or deletes anything. Tidying happens only when you press a Fix button: it moves or renames, never deletes, only inside the folders you chose and your own skill folders, and you can undo it. Nothing it finds is sent anywhere. There's no Skill and Folder Map OS account or server; Get AI Powers can't see any of it. Read [docs/PRIVACY-AND-SAFETY.md](docs/PRIVACY-AND-SAFETY.md) for the detail.
+Your maps live in this folder on your computer, in 3 files (the 2 maps, and a note of what has been tidied). Claude reads your `.claude` folder, your installed plugins and this kit's own skills to build the skills map, and the folders you choose to build the folder map; scanning never edits, moves or deletes anything. Tidying happens only when you press a Fix button: it moves or renames, never deletes, only inside the folders you chose and your own skill folders, and you can undo it. Nothing it finds is sent anywhere. There's no Agentic Skill and Folder Map account or server; Get AI Powers can't see any of it. Read [docs/PRIVACY-AND-SAFETY.md](docs/PRIVACY-AND-SAFETY.md) for the detail.
 
 ## Make it yours
 
@@ -84,7 +84,7 @@ Change the business areas, the colours, which folders it scans, by asking Claude
 
 ## Want it set up properly for you?
 
-Skill and Folder Map OS works on its own. If you'd like help turning the gaps it finds into real skills for your business, Get AI Powers can help. Find us at [getaipowers.com](https://getaipowers.com).
+Agentic Skill and Folder Map works on its own. If you'd like help turning the gaps it finds into real skills for your business, Get AI Powers can help. Find us at [getaipowers.com](https://getaipowers.com).
 
 ## What's inside
 
@@ -102,7 +102,7 @@ apps/                  the app and its look (theme.css); apps/skill-map/scan/sca
                         scan-files.py scan your folders; apps/skill-map/data/filemap.json is
                         the folder map they write
 docs/                  customising, privacy and safety
-maintainers/           for people developing Skill and Folder Map OS itself
+maintainers/           for people developing Agentic Skill and Folder Map itself
 ```
 
 ## Licence

@@ -9,7 +9,7 @@ description: Looks over the folder map and suggests what to tidy first - duplica
 
 - `apps/skill-map/data/filemap.json`: `findings` (what the scan spotted: `dups`, `big`, `stale`, `oldDownloads`, `installers`, `messy`, `emptyFolders`, `looseFolders`, `deepFolders`), `folders` (sizes, newest and oldest change, what kinds of file are in each), `files` (the biggest and newest files, and every file a finding names), and `recommendations` already open or skipped, so you don't repeat yourself.
 - `context/business.md` and `context/routines.md` if they exist, so you know what the business keeps and what it can let go of (for example, tax records are kept for years).
-- `apps/installed.json`: whether Task List OS is attached (an entry with `id: "task-list"`).
+- `apps/installed.json`: whether Agentic Task List is attached (an entry with `id: "task-list"`).
 
 ## What to do
 
@@ -27,7 +27,7 @@ Each suggestion needs a plain `title`, a `why` of 1 or 2 sentences that says wha
 
 `apps/skill-map/data/filemap.json`: new entries in `recommendations` only (`id`, `kind`, `title`, `why`, `fileIds`, `folderIds`, `status: "open"`, `createdAt`). Read the file immediately before you save, write the whole file back, and read it back to check it still parses.
 
-**If Task List OS is attached**, also add each new open suggestion as a suggested task there, in its own format (`apps/task-list/CLAUDE.md`), with `"source": { "tool": "skill-map", "id": "<recommendation id>" }`. It appears on its Review page with a New tag and needs their click there before anything happens. If it isn't attached, do nothing more; the suggestion waits on the Review page in this app.
+**If Agentic Task List is attached**, also add each new open suggestion as a suggested task there, in its own format (`apps/task-list/CLAUDE.md`), with `"source": { "tool": "skill-map", "id": "<recommendation id>" }`. It appears on its Review page with a New tag and needs their click there before anything happens. If it isn't attached, do nothing more; the suggestion waits on the Review page in this app.
 
 ## What to say back
 

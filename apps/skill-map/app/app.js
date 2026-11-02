@@ -1,5 +1,5 @@
 /*
-  SKILL MAP OS: the app
+  AGENTIC SKILL AND FOLDER MAP: the app
   ---------------------
   Ties everything together:
   1. Connects to data/skillmap.json through the shared store.
@@ -148,7 +148,7 @@
   }
   function gateCard(art, eyebrow, title, body, actions, small) {
     return '<div class="gate__card">' +
-      '<div class="gate__text"><div class="gate__brand"><img src="../shared/images/claude-icon.png" alt="" width="28" height="28"><span>Skill and Folder Map OS</span></div>' +
+      '<div class="gate__text"><div class="gate__brand"><img src="../shared/images/claude-icon.png" alt="" width="28" height="28"><span>Agentic Skill and Folder Map</span></div>' +
       (eyebrow ? '<span class="label">' + esc(eyebrow) + "</span>" : "") + "<h1>" + title + "</h1>" + body +
       '<div class="gate__actions">' + actions + "</div>" + (small ? '<p class="gate__small">' + small + "</p>" : "") + "</div>" +
       '<div class="gate__art"><img src="' + C.ART[art] + '" alt="" width="440" height="440"></div></div>';
@@ -159,7 +159,7 @@
     }
     if (status === "needs-helper") {
       return showGate(gateCard("welcome", "", "Your map opens from Claude.",
-        "<p>Claude runs your map on this computer and gives you a link to it. In Claude Code, in your Skill and Folder Map OS folder, just say:</p>" + C.say("Open my map") +
+        "<p>Claude runs your map on this computer and gives you a link to it. In Claude Code, in your Agentic Skill and Folder Map folder, just say:</p>" + C.say("Open my map") +
         '<p class="gate__note">Not set up yet? Say <strong>/setup</strong> instead. Claude scans your skills and your folders and draws the maps for you.</p>',
         "",
         '<button type="button" class="link-btn" data-action="connect">Or connect the folder yourself in Chrome</button>'));
@@ -177,8 +177,8 @@
         '<button type="button" class="btn btn--primary btn--lg" data-action="retry">' + icon("refresh") + "Try again</button>"));
     }
     showGate(gateCard("welcome", "One-time setup", "See every skill and folder you have. <span class=\"accent\">At a glance.</span>",
-      "<p>Skill and Folder Map OS finds the skills on your computer and the folders and files you keep, draws each as a map you can click into, and shows what you use, what is doubled up and what to tidy first. Scanning only reads names, sizes and dates, and nothing is changed until you press a Fix button. It all lives in files on your own computer.</p>" +
-      '<ol class="gate__steps"><li><span>Click <strong>Connect your map</strong>.</span></li><li><span>Choose your <strong>Skill and Folder Map OS</strong> folder, the one with START-HERE.md in it.</span></li><li><span>When Chrome asks to let this page edit files, click <strong>Allow</strong>.</span></li></ol>' +
+      "<p>Agentic Skill and Folder Map finds the skills on your computer and the folders and files you keep, draws each as a map you can click into, and shows what you use, what is doubled up and what to tidy first. Scanning only reads names, sizes and dates, and nothing is changed until you press a Fix button. It all lives in files on your own computer.</p>" +
+      '<ol class="gate__steps"><li><span>Click <strong>Connect your map</strong>.</span></li><li><span>Choose your <strong>Agentic Skill and Folder Map</strong> folder, the one with START-HERE.md in it.</span></li><li><span>When Chrome asks to let this page edit files, click <strong>Allow</strong>.</span></li></ol>' +
       (message ? '<p class="gate__error" role="alert">' + icon("alert") + esc(message) + "</p>" : ""),
       '<button type="button" class="btn btn--primary btn--lg" data-action="connect">' + icon("folder") + "Connect your map</button>",
       "No account, nothing to install. Your skills and files never leave your computer."));
@@ -277,7 +277,7 @@
     root.scrollTop = scroll;
     $("#viewTitle").textContent = view.title(c);
     $("#viewSub").textContent = view.sub ? view.sub(c) : "";
-    document.title = view.title(c) + " · Skill and Folder Map OS";
+    document.title = view.title(c) + " · Agentic Skill and Folder Map";
   }
 
   // The panel
@@ -409,7 +409,7 @@
     askClaude(kind).then(function (started) {
       if (started) return;
       $("#genericBody").innerHTML = '<div class="modal__head"><h2>Ask Claude to do it</h2><button type="button" class="icon-btn" data-close aria-label="Close">' + icon("x") + "</button></div>" +
-        '<div class="modal__body"><p>Claude can\u2019t be started from this page on this computer. In Claude Code, in your Skill and Folder Map OS folder, say:</p>' + C.say(JOBS[kind].say) +
+        '<div class="modal__body"><p>Claude can\u2019t be started from this page on this computer. In Claude Code, in your Agentic Skill and Folder Map folder, say:</p>' + C.say(JOBS[kind].say) +
         '<p class="muted">Claude does it straight away and this page updates by itself.</p></div>';
       $("#genericDialog").showModal();
     });
@@ -542,7 +542,7 @@
     const id = btn.getAttribute("data-id");
     switch (action) {
       // connecting
-      case "connect": store.connect().catch(function (err) { renderGate(err && err.kind === "wrong-folder" ? "That folder doesn't have a map in it. Choose the Skill and Folder Map OS folder." : ""); }); break;
+      case "connect": store.connect().catch(function (err) { renderGate(err && err.kind === "wrong-folder" ? "That folder doesn't have a map in it. Choose the Agentic Skill and Folder Map folder." : ""); }); break;
       case "reconnect": store.reconnect(); break;
       case "retry": store.retry(); break;
       // Claude's jobs

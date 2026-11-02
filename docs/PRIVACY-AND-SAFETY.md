@@ -4,7 +4,7 @@ Plain answers to the questions people ask before running the scan.
 
 ## Where is my information kept?
 
-In this folder on your computer. Skill and Folder Map OS has no account, no server and no database. Your skills map is one file, `apps/skill-map/data/skillmap.json`, and your folder map is another, `apps/skill-map/data/filemap.json`. Claude's notes about your business are in `context/`. You can open, read and edit all of it yourself.
+In this folder on your computer. Agentic Skill and Folder Map has no account, no server and no database. Your skills map is one file, `apps/skill-map/data/skillmap.json`, and your folder map is another, `apps/skill-map/data/filemap.json`. Claude's notes about your business are in `context/`. You can open, read and edit all of it yourself.
 
 If this folder sits inside Google Drive, OneDrive or Dropbox, it's backed up there like any other folder. If that folder is shared with other people, they can read your map and notes too, so keep it in a private part of your drive.
 
@@ -38,7 +38,7 @@ The same as it reads: names, sizes, kinds and dates, plus a count of how many fi
 
 No, and it can't see it either. A skill used only in Cowork or on claude.ai doesn't show up in Claude Code's history, so the scan has no way to count it. If a skill you use often looks unused on the map, that's usually why: say so plainly rather than let it mislead you. "Add a skill" in the app's top bar lets you add one by hand so it shows on the map anyway.
 
-## Does Skill and Folder Map OS change any of my skills, files or folders?
+## Does Agentic Skill and Folder Map change any of my skills, files or folders?
 
 Not on its own. Scanning and reviewing only read: Claude looks at names, sizes and dates and never opens a file. When Claude thinks something should change (two skills sharing a name, one worth retiring, a set of duplicate files, an old file worth archiving), it adds a suggestion and a Fix button. Nothing changes until you press the button and confirm in the box that tells you exactly what will happen.
 
@@ -50,15 +50,15 @@ No. Both scans run entirely on your computer and write to files also on your com
 
 ## What about passwords and keys?
 
-Skill and Folder Map OS doesn't need a sign-in to anything: it only works with files already on your computer. It never asks for a password or a key, and none should ever go into this folder or into the chat. Other tools in the toolkit connect apps through Claude's Connectors, signed in on each app's own page, with no keys; an app with no Claude connector is read from a CSV or PDF export you drop in the files folder.
+Agentic Skill and Folder Map doesn't need a sign-in to anything: it only works with files already on your computer. It never asks for a password or a key, and none should ever go into this folder or into the chat. Other tools in the toolkit connect apps through Claude's Connectors, signed in on each app's own page, with no keys; an app with no Claude connector is read from a CSV or PDF export you drop in the files folder.
 
 ## What is the helper?
 
-Your app runs from a small program in your Skill and Folder Map OS folder, so it opens like a web page at http://localhost:4747. It only listens on your own computer: nothing on the internet or your network can reach it. It only shows the app and only ever saves your map files, keeping a backup before every save. When you press Scan, Group or Review in the app, on either side, it can start Claude Code on your computer to do that one job, and only when the app itself asks.
+Your app runs from a small program in your Agentic Skill and Folder Map folder, so it opens like a web page at http://localhost:4747. It only listens on your own computer: nothing on the internet or your network can reach it. It only shows the app and only ever saves your map files, keeping a backup before every save. When you press Scan, Group or Review in the app, on either side, it can start Claude Code on your computer to do that one job, and only when the app itself asks.
 
 ## Who sees my information?
 
-You, and Claude while you're working with it. Your conversations with Claude are covered by your Claude account's privacy settings, which you can check in the Claude app. Get AI Powers, who made Skill and Folder Map OS, can't see your folder or your maps.
+You, and Claude while you're working with it. Your conversations with Claude are covered by your Claude account's privacy settings, which you can check in the Claude app. Get AI Powers, who made Agentic Skill and Folder Map, can't see your folder or your maps.
 
 ## The approve button
 

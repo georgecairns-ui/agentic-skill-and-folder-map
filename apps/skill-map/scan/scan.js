@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /*
-  SKILL MAP OS: the scan (Node version)
+  AGENTIC SKILL AND FOLDER MAP: the scan (Node version)
   --------------------------------------
   Finds every skill and command Claude can use on this computer, works out how they connect and how
   often each was used, and saves the result in apps/skill-map/data/skillmap.json for the app to draw.

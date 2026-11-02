@@ -8,7 +8,7 @@ description: Looks over the skill map and suggests what to tidy up - duplicate n
 ## What to read
 
 - `apps/skill-map/data/skillmap.json`: `nodes`, `edges` (duplicate names are `type: "dup"`), `areas`, and `recommendations` already open or skipped, so you don't repeat yourself.
-- `apps/installed.json`: whether Task List OS is attached (an entry with `id: "task-list"`).
+- `apps/installed.json`: whether Agentic Task List is attached (an entry with `id: "task-list"`).
 
 ## What to do
 
@@ -26,7 +26,7 @@ Each suggestion needs a plain `title`, a `why` of 1 or 2 sentences, and the `nod
 
 `apps/skill-map/data/skillmap.json`: new entries in `recommendations` only (`id`, `kind`, `title`, `why`, `nodeIds`, `status: "open"`, `createdAt`). Read the file immediately before you save, write the whole file back, and read it back to check it still parses.
 
-**If Task List OS is attached**, also add each new open suggestion as a suggested task there, in its own format (`apps/task-list/CLAUDE.md`), with `"source": { "tool": "skill-map", "id": "<recommendation id>" }`. It appears on its Review page with a New tag, and needs their click there before anything happens. If Task List OS isn't attached, do nothing more; the suggestion just waits on the Review page in this app.
+**If Agentic Task List is attached**, also add each new open suggestion as a suggested task there, in its own format (`apps/task-list/CLAUDE.md`), with `"source": { "tool": "skill-map", "id": "<recommendation id>" }`. It appears on its Review page with a New tag, and needs their click there before anything happens. If Agentic Task List isn't attached, do nothing more; the suggestion just waits on the Review page in this app.
 
 ## What to say back
 
