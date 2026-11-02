@@ -1,4 +1,4 @@
-# Marketing notes: Skill and Folder Map OS
+# Marketing notes: Agentic Skill and Folder Map
 
 ## In one sentence
 

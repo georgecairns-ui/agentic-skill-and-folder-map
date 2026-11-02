@@ -3,7 +3,7 @@
   -----------------------------------------------------
   Chips, the use-per-month bars, section headings and empty states. Each function returns a piece
   of HTML as text. Buttons carry data-action="..." and app.js decides what each does. Same look and
-  wording as Task List OS.
+  wording as Agentic Task List.
 */
 (function () {
   "use strict";
@@ -107,7 +107,7 @@
       '<div class="setup-card__body"><h2>Let’s map your skills</h2>' +
       '<p class="muted">Claude looks through the skills on this computer, works out which ones you use and how they connect, and draws them here. It only reads: nothing is changed, moved or sent.</p>' +
       '<div class="setup-card__actions">' + (c && c.canScan ? '<button type="button" class="btn btn--primary btn--lg" data-action="scan">' + icon("refresh") + "Scan my skills now</button>" : "") + "</div>" +
-      '<p class="muted setup-card__alt">' + (c && c.canScan ? "Or in Claude Code, in your Skill and Folder Map OS folder, say " : "In Claude Code, in your Skill and Folder Map OS folder, say ") + say("Scan my skills") + "</p></div></section>";
+      '<p class="muted setup-card__alt">' + (c && c.canScan ? "Or in Claude Code, in your Agentic Skill and Folder Map folder, say " : "In Claude Code, in your Agentic Skill and Folder Map folder, say ") + say("Scan my skills") + "</p></div></section>";
   }
 
   window.SM = window.SM || {};

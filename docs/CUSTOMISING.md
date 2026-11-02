@@ -1,6 +1,6 @@
 # Make it yours
 
-Skill and Folder Map OS comes with a clean, calm look in light or dark (the moon or sun button at the top switches), but it's your workspace. During setup Claude offers to use your own colours, font and logo; you can ask again any time ("make it match my brand"). The easiest way to change anything is to ask Claude, for example:
+Agentic Skill and Folder Map comes with a clean, calm look in light or dark (the moon or sun button at the top switches), but it's your workspace. During setup Claude offers to use your own colours, font and logo; you can ask again any time ("make it match my brand"). The easiest way to change anything is to ask Claude, for example:
 
 - "Make the map use our brand colours: navy and orange."
 - "Change the font to something rounder."

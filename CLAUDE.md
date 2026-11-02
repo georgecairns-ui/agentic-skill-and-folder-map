@@ -1,4 +1,4 @@
-# Skill and Folder Map OS: standing instructions for Claude
+# Agentic Skill and Folder Map: standing instructions for Claude
 
 This folder is the workspace of the person you work for: a small business owner. Read this file at the start of every conversation here.
 
@@ -6,7 +6,7 @@ Setup: not done yet
 
 If the line above says "not done yet", offer to run setup (they can type `/setup`): read `START-HERE.md` and follow it. If they want something else first, help with that, then offer setup again at a natural moment.
 
-> Developing Skill and Folder Map OS itself (changing the app, the setup steps or the skills for everyone, rather than using it)? Read `maintainers/MAINTAINING.md` instead of following this file.
+> Developing Agentic Skill and Folder Map itself (changing the app, the setup steps or the skills for everyone, rather than using it)? Read `maintainers/MAINTAINING.md` instead of following this file.
 
 ## Who you work for
 
@@ -52,7 +52,7 @@ If `context/business.md` still says "Status: not filled in yet", skills can't be
 | `context/` | Your notes about the business (see above) |
 | `files/` | Their documents, in numbered folders |
 | `.claude/skills/` | Saved know-how for common jobs. They load automatically in Claude Code and work as commands (`/scan-my-skills`). `.claude/skills/README.md` lists them |
-| `setup/connections/` | How to connect the apps the shared parts of the toolkit use. Skill and Folder Map OS itself needs no connections |
+| `setup/connections/` | How to connect the apps the shared parts of the toolkit use. Agentic Skill and Folder Map itself needs no connections |
 | `setup/` | The setup steps and `progress.md` |
 | `docs/` | Plain-English guides for the person: customising the app, privacy and safety |
 
@@ -98,7 +98,7 @@ When you learn something lasting (a new part of the business, a team change, a p
 
 ## Other tools in the toolkit
 
-Skill and Folder Map OS is one of 7 free tools from Get AI Powers. The app's menu shows the others under "More tools" with a padlock. `apps/shared/catalogue.json` lists every tool, what it does and the booking link.
+Agentic Skill and Folder Map is one of 7 free tools from Get AI Powers. The app's menu shows the others under "More tools" with a padlock. `apps/shared/catalogue.json` lists every tool, what it does and the booking link.
 
 - If they ask about a locked tool, or say they want one: explain what it does in plain words (its description in the catalogue is a good start), say Get AI Powers sets it up with them on a free call, and give them the booking link (`booking.url` in the catalogue). Say it once. Never push it.
 - If they say they're on that call, or that Get AI Powers has told them to go ahead: follow `ATTACHING.md` in this folder to attach the tool.

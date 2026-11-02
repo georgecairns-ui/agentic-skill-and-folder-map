@@ -39,7 +39,7 @@
         prop("Full path", '<code class="path">' + esc(full) + '</code><button type="button" class="icon-btn icon-btn--sm" data-action="copy" data-text="' + esc(full) + '" aria-label="Copy the path" title="Copy the path">' + icon("fileText") + "</button>") +
       "</div>" + why(d, x.id) +
       (copies.length ? '<div class="drawer__section"><h3 class="drawer__h">Other copies</h3><ul class="hlist hlist--plain" role="list">' + copies.slice(0, 8).map(function (y) { return '<li><button type="button" class="hrow hrow--btn" data-action="open-file" data-id="' + esc(y.id) + '"><span class="hrow__main"><span class="hrow__title">' + esc(y.name) + '</span><span class="hrow__sub">' + esc((FM.folderById(d, y.folder) || {}).path || "") + "</span></span></button></li>"; }).join("") + "</ul></div>" : "") +
-      '<p class="drawer__small muted">Skill and Folder Map OS only read this file’s name, size and date. It never opens a file.</p></div>' +
+      '<p class="drawer__small muted">Agentic Skill and Folder Map only read this file’s name, size and date. It never opens a file.</p></div>' +
       '<div class="drawer__foot"><button type="button" class="btn btn--sm" data-action="file-on-map" data-id="' + esc(x.id) + '">' + icon("map") + 'Show on the map</button><a class="btn btn--sm btn--ghost" href="' + esc(C.claudeLink(prompt)) + '" title="Opens Claude with this typed in. Nothing is sent until you press send.">' + icon("sparkle") + "Look at it with Claude</a></div>";
   }
 

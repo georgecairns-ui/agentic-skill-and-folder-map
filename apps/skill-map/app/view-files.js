@@ -20,7 +20,7 @@
       '<p class="muted">Claude looks through the folders you choose and draws them as a map you can click into, down to each file. Then it shows what needs tidying: duplicates, very big files, old downloads, untidy names and empty folders.</p>' +
       '<p class="muted"><strong>It reads names, sizes and dates only.</strong> It never opens a file, and nothing is ever deleted. Tidying happens only when you press a Fix button. It starts with ' + roots.map(function (r) { return "<code>" + esc(r) + "</code>"; }).join(", ") + '. You change the list in <button type="button" class="link-btn" data-action="settings">Preferences</button>.</p>' +
       '<div class="setup-card__actions">' + (c.canScan ? '<button type="button" class="btn btn--primary btn--lg" data-action="scan-folders">' + icon("refresh") + "Scan my folders now</button>" : "") + "</div>" +
-      '<p class="muted setup-card__alt">' + (c.canScan ? "Or in Claude Code, in your Skill and Folder Map OS folder, say " : "In Claude Code, in your Skill and Folder Map OS folder, say ") + C.say("Scan my folders") + "</p></div></section>";
+      '<p class="muted setup-card__alt">' + (c.canScan ? "Or in Claude Code, in your Agentic Skill and Folder Map folder, say " : "In Claude Code, in your Agentic Skill and Folder Map folder, say ") + C.say("Scan my folders") + "</p></div></section>";
   }
   F.foldersCard = foldersCard;
 
@@ -231,7 +231,7 @@
     const d = c.f, k = KINDS[r.kind] || KINDS.review;
     const files = r.fileIds.map(function (id) { return FM.fileById(d, id); }).filter(Boolean);
     const folders = r.folderIds.map(function (id) { return FM.folderById(d, id); }).filter(Boolean);
-    const prompt = "Skill and Folder Map OS suggested this about my folders: " + r.title + ". " + (r.why || "") + " Please talk me through it. Don't move, rename or delete anything until I say so.";
+    const prompt = "Agentic Skill and Folder Map suggested this about my folders: " + r.title + ". " + (r.why || "") + " Please talk me through it. Don't move, rename or delete anything until I say so.";
     return '<article class="rec enter" data-rec="' + esc(r.id) + '"><div class="rec__icon">' + icon(k.icon) + '</div><div class="rec__body"><div class="rec__top"><span class="chip chip--quiet">' + esc(k.label) + "</span></div><h3>" + esc(r.title) + "</h3>" + (r.why ? '<p class="muted">' + esc(r.why) + "</p>" : "") +
       ((files.length || folders.length) ? '<div class="gap__chips">' + folders.slice(0, 5).map(function (f) { return '<button type="button" class="skill-chip" data-action="open-folder" data-id="' + esc(f.id) + '">' + esc(f.name) + "</button>"; }).join("") + files.slice(0, 6).map(function (x) { return '<button type="button" class="skill-chip is-used" data-action="open-file" data-id="' + esc(x.id) + '">' + esc(x.name) + "</button>"; }).join("") + "</div>" : "") +
       '<div class="rec__actions">' + (T.filesRecPlan(d, r) ? '<button type="button" class="btn btn--sm btn--primary" data-action="fix" data-lens="files" data-key="rec" data-id="' + esc(r.id) + '">' + icon("sparkle") + esc(T.filesRecPlan(d, r).button) + "</button>" : "") + '<button type="button" class="btn btn--sm btn--approve" data-action="frec-done" data-id="' + esc(r.id) + '">' + icon("check") + 'Done</button><button type="button" class="btn btn--sm" data-action="frec-skip" data-id="' + esc(r.id) + '">Not now</button>' +

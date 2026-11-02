@@ -2,25 +2,25 @@
 #
 # MAKE RELEASE
 # ------------
-# Builds dist/skill-and-folder-map-os.zip: a clean copy of the kit for customers to download.
+# Builds dist/agentic-skill-and-folder-map.zip: a clean copy of the kit for customers to download.
 #
-# Run it from the skill-and-folder-map-os folder with:   bash maintainers/make-release.sh
+# Run it from the agentic-skill-and-folder-map folder with:   bash maintainers/make-release.sh
 #
 # What it does:
 #   1. Checks the files that ship are still blank templates, so nobody's real skill map,
 #      folder map, business notes or setup progress can go out by mistake. Stops if not.
-#   2. Copies the kit into a temporary folder called "Skill and Folder Map OS", leaving out this
+#   2. Copies the kit into a temporary folder called "Agentic Skill and Folder Map", leaving out this
 #      maintainers folder, git history, old builds, backups and computer clutter.
 #   3. Checks the copy is complete and both data files are valid, and syntax-checks all 4 scan scripts.
-#   4. Zips it as dist/skill-and-folder-map-os.zip, replacing any older one.
+#   4. Zips it as dist/agentic-skill-and-folder-map.zip, replacing any older one.
 
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DIST="$ROOT/dist"
-STAGE="$(mktemp -d "${TMPDIR:-/tmp}/skill-and-folder-map-os-build.XXXXXX")"
+STAGE="$(mktemp -d "${TMPDIR:-/tmp}/agentic-skill-and-folder-map-build.XXXXXX")"
 trap 'rm -rf "$STAGE"' EXIT
-NAME="Skill and Folder Map OS"
+NAME="Agentic Skill and Folder Map"
 OUT="$STAGE/$NAME"
 
 fail() { echo "RELEASE STOPPED: $1" >&2; exit 1; }
@@ -104,7 +104,7 @@ toolkit_shared_version = json.loads((root / "toolkit.json").read_text()).get("sh
 if str(toolkit_shared_version) != shared_version:
     problems.append(f"toolkit.json sharedVersion is {toolkit_shared_version!r} but apps/shared/VERSION says {shared_version}: change them together")
 # Shared parts are identical in every tool, so they must not name one. No file may use the old start-up names,
-# and no message in the scripts, the helper or the shared page code may say "Skill and Folder Map OS" (they read the tool's name from toolkit.json)
+# and no message in the scripts, the helper or the shared page code may say "Agentic Skill and Folder Map" (they read the tool's name from toolkit.json)
 skip_dirs = {".git", "dist", "maintainers", "node_modules"}
 for f in sorted(root.rglob("*")):
     if not f.is_file() or skip_dirs & set(f.relative_to(root).parts) or f.suffix in (".png", ".jpg", ".woff2", ".zip", ".gz", ".ico"):
@@ -137,8 +137,8 @@ for f in sorted(root.rglob("*")):
     for old in ("open-task-list", "start-task-list"):
         if old in txt:
             problems.append(f"{rel} uses the old name {old} (it is now open-the-app / start-app, the same in every tool)")
-    if re.match(r"setup/scripts/|apps/server/|apps/shared/js/", rel) and re.search(r"Skill and Folder Map OS|(?<!window\.)TaskListOS", txt):
-        problems.append(f"{rel} names a tool (Skill and Folder Map OS): shared parts read the name from toolkit.json")
+    if re.match(r"setup/scripts/|apps/server/|apps/shared/js/", rel) and re.search(r"Agentic Skill and Folder Map|(?<!window\.)TaskListOS", txt):
+        problems.append(f"{rel} names a tool (Agentic Skill and Folder Map): shared parts read the name from toolkit.json")
 for p in problems:
     print("  - " + p, file=sys.stderr)
 sys.exit(1 if problems else 0)
@@ -163,8 +163,8 @@ done
 for f in apps/skill-map/data/skillmap.json apps/skill-map/data/filemap.json apps/skill-map/data/tidy.json apps/skill-map/menu.json apps/skill-map/claude-jobs.json apps/skill-map/areas-default.json toolkit.json apps/installed.json apps/shared/catalogue.json; do
   python3 -c 'import json,sys; json.load(open(sys.argv[1]))' "$OUT/$f" || fail "$f is not valid"
 done
-# A fresh download lists only Skill and Folder Map OS, and no test tool ever ships
-python3 -c 'import json,sys; t=json.load(open(sys.argv[1]))["tools"]; sys.exit(0 if [x["id"] for x in t]==["skill-map"] else 1)' "$OUT/apps/installed.json" || fail "apps/installed.json must list only Skill and Folder Map OS"
+# A fresh download lists only Agentic Skill and Folder Map, and no test tool ever ships
+python3 -c 'import json,sys; t=json.load(open(sys.argv[1]))["tools"]; sys.exit(0 if [x["id"] for x in t]==["skill-map"] else 1)' "$OUT/apps/installed.json" || fail "apps/installed.json must list only Agentic Skill and Folder Map"
 python3 -c 'import json,sys; t=json.load(open(sys.argv[1])); sys.exit(0 if t.get("id")=="skill-map" else 1)' "$OUT/toolkit.json" || fail "toolkit.json must have id skill-map"
 [ ! -e "$OUT/apps/test-tool" ] || fail "the test tool is in the release"
 # Both data files must be listed, in both places that track them
@@ -206,14 +206,14 @@ BANNED='leverage|synergy|game-changer|seamless|cutting-edge|streamline|empower|u
 if grep -EinH "$BANNED" "$OUT/README.md" "$OUT/START-HERE.md" >/dev/null 2>&1; then
   fail "a banned word is in README.md or START-HERE.md: $(grep -EinH "$BANNED" "$OUT/README.md" "$OUT/START-HERE.md" | head -3)"
 fi
-# The old name must not linger anywhere a customer reads first
-if grep -inH 'Skill Map OS' "$OUT/README.md" "$OUT/START-HERE.md" >/dev/null 2>&1; then
-  fail "the old name 'Skill Map OS' is still in README.md or START-HERE.md: $(grep -inH 'Skill Map OS' "$OUT/README.md" "$OUT/START-HERE.md" | head -3)"
+# The old names must not linger anywhere a customer reads first
+if grep -EinH 'Skill Map OS|Skill and Folder Map OS' "$OUT/README.md" "$OUT/START-HERE.md" >/dev/null 2>&1; then
+  fail "an old name ('Skill Map OS' or 'Skill and Folder Map OS') is still in README.md or START-HERE.md: $(grep -EinH 'Skill Map OS|Skill and Folder Map OS' "$OUT/README.md" "$OUT/START-HERE.md" | head -3)"
 fi
 
 SKILLS=$(find "$OUT/.claude/skills" -name SKILL.md | wc -l | tr -d ' ')
 
 # ---------- 4. Zip (COPYFILE_DISABLE stops macOS adding hidden ._ files) ----------
-rm -f "$DIST/skill-and-folder-map-os.zip"
-(cd "$STAGE" && COPYFILE_DISABLE=1 zip -rqX "$DIST/skill-and-folder-map-os.zip" "$NAME")
-echo "Built dist/skill-and-folder-map-os.zip ($(du -h "$DIST/skill-and-folder-map-os.zip" | cut -f1 | tr -d ' '), $SKILLS skills)"
+rm -f "$DIST/agentic-skill-and-folder-map.zip"
+(cd "$STAGE" && COPYFILE_DISABLE=1 zip -rqX "$DIST/agentic-skill-and-folder-map.zip" "$NAME")
+echo "Built dist/agentic-skill-and-folder-map.zip ($(du -h "$DIST/agentic-skill-and-folder-map.zip" | cut -f1 | tr -d ' '), $SKILLS skills)"

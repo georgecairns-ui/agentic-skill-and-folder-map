@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SKILL AND FOLDER MAP OS: the folder scan (Python version)
+AGENTIC SKILL AND FOLDER MAP: the folder scan (Python version)
 ---------------------------------------------------------
 Walks the folders the person chose and saves what it found in apps/skill-map/data/filemap.json, for the app
 to draw as a map of folders and files and to point out what needs tidying.

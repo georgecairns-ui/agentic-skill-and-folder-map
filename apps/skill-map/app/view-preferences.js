@@ -1,7 +1,7 @@
 /*
   PREFERENCES: your name, extra folders to scan, and the areas of your business
   -----------------------------------------------------------------------------
-  The areas are the words Skill and Folder Map OS uses to group skills by what they do for the business.
+  The areas are the words Agentic Skill and Folder Map uses to group skills by what they do for the business.
   Rename them, change what they say, add your own, or remove the ones that don't fit.
 */
 (function () {

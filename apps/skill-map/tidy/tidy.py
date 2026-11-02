@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-SKILL AND FOLDER MAP OS: the tidy-up (Python version)
+AGENTIC SKILL AND FOLDER MAP: the tidy-up (Python version)
 ------------------------------------------------------
 Does the tidying the person asked for with a button press. The app writes what it wants done into
 apps/skill-map/data/tidy.json (a list of moves, with the person's OK already given), and Claude runs

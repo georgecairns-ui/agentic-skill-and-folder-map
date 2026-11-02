@@ -1,4 +1,4 @@
-# Testing Skill and Folder Map OS
+# Testing Agentic Skill and Folder Map
 
 How to test the whole thing as a customer would, without touching the repo. Also follow section 5 of `SHARED-V3-CHANGES.md` and the testing sections of `SHARED-V4-CHANGES.md`, `SHARED-V5-CHANGES.md` and `SHARED-V6-CHANGES.md` for the shared parts.
 
@@ -10,7 +10,7 @@ Never test inside the repo: setup and scanning write real details into it. Build
 bash maintainers/make-release.sh
 ```
 
-Then unzip `dist/skill-and-folder-map-os.zip` into a test location, for example `Documents/Skill and Folder Map OS test`. Each test run starts from a fresh unzip.
+Then unzip `dist/agentic-skill-and-folder-map.zip` into a test location, for example `Documents/Agentic Skill and Folder Map test`. Each test run starts from a fresh unzip.
 
 ## 2. Parity test: scan.js and scan.py must write byte-identical files
 
@@ -126,7 +126,7 @@ Check by hand in the output: the duplicate pair appears once in `findings.dups.g
 
 ## 4. Page checks, Skills lens
 
-Run the app (`node apps/server/server.js` or `python3 apps/server/server.py`), open http://localhost:4747, go into Skill and Folder Map OS, and check:
+Run the app (`node apps/server/server.js` or `python3 apps/server/server.py`), open http://localhost:4747, go into Agentic Skill and Folder Map, and check:
 
 - **Fresh install** (empty `data/skillmap.json`, `scan: null`): the Map page and the first Home box show the "Let's map your skills" card with "Scan my skills now" and the phrase to say to Claude instead. Nothing mentions a demo.
 - **First scan**: press Scan my skills now (or ask Claude), wait for it to finish, and the Map page draws.
@@ -171,13 +171,13 @@ Switch to the Files lens (the Skills | Files control in the top bar, or the `T` 
 
 ## 7. The 6 jobs, with a stand-in `claude`
 
-Point `TLOS_CLAUDE` at a stand-in script that follows the job prompts without using real Claude (see Task List OS's own stand-in for the pattern). For each job, trigger it from the app and check:
+Point `TLOS_CLAUDE` at a stand-in script that follows the job prompts without using real Claude (see Agentic Task List's own stand-in for the pattern). For each job, trigger it from the app and check:
 
 - **`scan-my-skills`**: the stand-in runs the skills scan script once and nothing else; the app shows "Claude is scanning your skills" while it runs and the result afterwards.
 - **`group-my-skills`**: the stand-in sets `area` and `areaBy: "claude"` only on skills with no area and `areaBy` not `"you"`; a skill the person already placed by hand is untouched; the approval banner and "It looks right" button appear once there's at least one Claude-grouped skill.
-- **`review-my-skills`**: the stand-in adds up to 8 new recommendations, never duplicating an open or skipped one; with Task List OS attached (see section 10), each new recommendation also appears there as a suggested task with `source.tool` set to `skill-map` and `source.id` matching the recommendation's id; without it attached, nothing else happens.
+- **`review-my-skills`**: the stand-in adds up to 8 new recommendations, never duplicating an open or skipped one; with Agentic Task List attached (see section 10), each new recommendation also appears there as a suggested task with `source.tool` set to `skill-map` and `source.id` matching the recommendation's id; without it attached, nothing else happens.
 - **`scan-my-folders`**: the stand-in runs the folder scan script once (handling `scan-my-folders` the same way the skills stand-in handles `scan-my-skills`) and nothing else; the app shows a scanning state while it runs and the one-line summary afterwards.
-- **`review-my-folders`**: the stand-in (also handling `review-my-folders`) adds up to 8 new recommendations to `filemap.json`, never duplicating an open or skipped one, and never adds, edits or deletes a file or folder itself; with Task List OS attached, each new recommendation appears there the same way as `review-my-skills`'s.
+- **`review-my-folders`**: the stand-in (also handling `review-my-folders`) adds up to 8 new recommendations to `filemap.json`, never duplicating an open or skipped one, and never adds, edits or deletes a file or folder itself; with Agentic Task List attached, each new recommendation appears there the same way as `review-my-skills`'s.
 
 ## 8. Speed: 700 skills and 15,000 files
 
@@ -185,14 +185,14 @@ Build or reuse a large fixture with around 700 skills in the skills data file an
 
 ## 9. Menu and locked-tool panel
 
-As `SHARED-V3-CHANGES.md` section 5 describes: on a scratch copy, the sidebar shows Home, Skill and Folder Map OS as an open dropdown with its pages, and the other 6 tools locked under "More tools" in catalogue order. Folding the dropdown shows the total waiting and the choice is remembered. Each locked tool opens the panel with the right tracking on its button link; Escape and a click outside close it; it works by keyboard and at phone width. `showMoreTools: false` in `catalogue.json` hides the locked tools completely.
+As `SHARED-V3-CHANGES.md` section 5 describes: on a scratch copy, the sidebar shows Home, Agentic Skill and Folder Map as an open dropdown with its pages, and the other 6 tools locked under "More tools" in catalogue order. Folding the dropdown shows the total waiting and the choice is remembered. Each locked tool opens the panel with the right tracking on its button link; Escape and a click outside close it; it works by keyboard and at phone width. `showMoreTools: false` in `catalogue.json` hides the locked tools completely.
 
-## 10. Attach to a scratch Task List OS
+## 10. Attach to a scratch Agentic Task List
 
-Follow `ATTACHING.md` on a scratch copy of Task List OS, then check:
+Follow `ATTACHING.md` on a scratch copy of Agentic Task List, then check:
 
-- Both tools show as dropdowns in the sidebar; Home offers both tools' boxes (Skill and Folder Map OS's start off, in the hidden list, per the shared rule); nothing in Task List OS broke.
-- `review-my-skills` and `review-my-folders` both add their suggestions to Task List OS as described in section 7 above.
+- Both tools show as dropdowns in the sidebar; Home offers both tools' boxes (Agentic Skill and Folder Map's start off, in the hidden list, per the shared rule); nothing in Agentic Task List broke.
+- `review-my-skills` and `review-my-folders` both add their suggestions to Agentic Task List as described in section 7 above.
 - One check-in, if scheduled, runs both tools' steps.
 
 ## 11. Helper: Node and Python behave the same
