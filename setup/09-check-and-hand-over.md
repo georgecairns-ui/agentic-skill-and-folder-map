@@ -13,19 +13,29 @@ Check these yourself. Fix anything that fails, then check again.
 - [ ] The All files, Clean-up and Review pages on the Files side show real data: their actual folders and files, not placeholder text.
 - [ ] The app looks right in both light and dark (the moon or sun button at the top).
 - [ ] Nothing secret (a password, a key, a code) is anywhere in this folder.
+- [ ] `context/goal.md` has their goal with the numbers.
+- [ ] Any row in `apps/home/data/connections.json` is `connected`, `export-only`, `no-connector`, `waiting` (with `waitingOn` and the one thing still to do in `note`), `needs-attention` or `not-connected`.
 
 ## 2. Hand over
 
-Give them a plain summary with real numbers from both maps. For example:
+Start with their goal, in one line: what they want to achieve (from `context/goal.md`) and that everything here is set up to help with it. Then give them a plain summary with real numbers from both maps. For example:
 
 > Here's what I found. On the skills side: 42 skills and 6 commands across 7 places, 18 used in the last 90 days, 3 sharing a name. Sales and client delivery are well covered; marketing and money and admin don't have a skill yet. On the folders side: 612 folders and 12,408 files, 41 GB in all. The 3 biggest things worth tidying are keeping one copy of 18 sets of duplicate files (about 2.1 GB), clearing 140 old files from Downloads, and archiving a few big files nobody has touched in 2 years. I've grouped everything and left suggestions on both Review pages.
 
-Use the real numbers from your own scans, never this example. Then tell them, briefly:
+Use the real numbers from your own scans, never this example. Then, in one line each, only where they apply:
+
+- **Anything still waiting.** List every `waiting` connection with the one thing to do next: "Microsoft 365 is waiting on your IT team to approve it. When they have, press Finish connecting on Home, or tell me, and I'll read its last 30 days then."
+- **Files you said you'd share.** List any still `to find` in `setup/progress.md`, by name.
+- **Joining up the rest.** If they named something they already use (`setup/first-questions.md`, question 6) that this tool doesn't connect, or anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link.
+
+Then tell them, briefly:
 
 - **What's empty**, in your own words: which business areas have no skill yet, and what one there could do.
 - **What to do next**: scan again, on either side, whenever they like, and say "review my folders" or "review my skills" about once a month for fresh suggestions.
 - That they can say "get the latest version" any time and you will bring the app up to date, keeping everything of theirs.
 - Their link, **http://localhost:4747/skill-map/**. Bookmark it.
+
+Then offer the 10-minute "how to use Claude day to day" lesson from `setup/learn-as-you-go.md`, in every guide mode. If they say no, tell them they can say "show me how to use Claude" any time.
 
 ## 3. A weekly scan (optional)
 

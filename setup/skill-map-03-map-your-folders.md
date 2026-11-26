@@ -10,7 +10,7 @@ One plain sentence before you start:
 
 ## 2. Choose the folders
 
-Show them the default list, and ask once whether to change it:
+Show them the default list, plus any folders they named in `setup/first-questions.md` (question 4), and ask once whether to change it:
 
 > By default I look in Documents, Desktop and Downloads. Want to add anywhere else, a Google Drive or Dropbox folder, a folder on an external drive, or take any of those out?
 

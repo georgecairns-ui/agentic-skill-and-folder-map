@@ -2,13 +2,17 @@
 
 Goal: find every skill Claude can use on their computer and let them see the map for the first time.
 
-## 1. Tell them what's about to happen
+## 1. The first questions
+
+First, follow `setup/first-questions.md`: the talking tip, the first questions (their name, business and website, their computer, Claude plan, where their files are, what they already use, and their goal; this tool connects no email, so it leaves out the email question), then look for what you need yourself and show them what you found. In this tool, that look reads their website, the apps this session is already connected to, and the names of files and folders in the folders they named: never open a file in their folders unless they hand you that one file themselves (`setup/first-questions.md`, section 4). The folders they named are the start of step 2's list. Then go on to the scan below.
+
+## 2. Tell them what's about to happen
 
 One plain sentence before you start:
 
 > I'm going to look through your computer for every skill and command Claude can use, and build you a map of them. Nothing is changed or sent; I'm only reading. Tidying only happens later, if you press a Fix button.
 
-## 2. Run the scan
+## 3. Run the scan
 
 - `node apps/skill-map/scan/scan.js`
 - No Node? `python3 apps/skill-map/scan/scan.py`
@@ -20,23 +24,23 @@ One plain sentence before you start:
 
   Then run the scan again.
 
-## 3. Read the summary
+## 4. Read the summary
 
 The scan prints one line plus a few short ones under it. Tell them the numbers in plain words, not the raw line: how many skills and commands it found, how many places it looked, how many have been used in the last 90 days, how many names turned up twice, and any notes it printed (for example, if it couldn't find any Claude Code history).
 
 If the scan found no Claude Code history, say so plainly: use counts will show as 0 for now, and nothing will be marked as unused until there's some history to go on.
 
-## 4. Start the app and give them the link
+## 5. Start the app and give them the link
 
 Follow `.claude/skills/open-the-app` to start the app, then give them this link: **http://localhost:4747/skill-map/**
 
-## 5. Walk them through the Map
+## 6. Walk them through the Map
 
 In 4 short sentences:
 
 > Claude sits in the middle. Each hub around it is a group of skills. The bigger the dot, the more that skill has been used in the last 90 days. A hollow dot means it hasn't been used in that time.
 
-## 6. Ask about other places skills live
+## 7. Ask about other places skills live
 
 Ask once, in one message:
 

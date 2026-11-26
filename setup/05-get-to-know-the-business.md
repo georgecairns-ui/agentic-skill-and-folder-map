@@ -4,20 +4,22 @@ Goal: a short, accurate note in `context/business.md` so the groups on the map a
 
 ## 1. Ask, in one message
 
-Say why in one line, then ask up to 3 questions:
+Their name, business and website are already in `context/business.md` from `setup/first-questions.md`. Start from those, what you found and they confirmed there (section 3), and their goal in `context/goal.md`: don't ask for any of it again. If that already tells you what the business does and for whom, skip to section 3.
 
-> So I can group your skills sensibly, a couple of quick questions. What does the business do, and for whom? What do you spend most of your week on? And have you got a website?
+Otherwise, say why in one line, then ask up to 2 questions, leaving out any that's already answered:
 
-## 2. If they give a website
+> So I can group your skills sensibly, a couple of quick questions. What does the business do, and for whom? What do you spend most of your week on?
 
-If you can read web pages, read it first and work out what the business does and who for. Then offer your draft back to them rather than asking again:
+## 2. Their website
+
+If they have one and you can read web pages, read it before asking anything and work out what the business does and who for. Then offer your draft back to them rather than asking again:
 
 > From your website, it looks like [draft]. Is that right, or would you put it differently?
 
 ## 3. Fill in the notes
 
-- `context/business.md`: what the business does, who for, website, and anything else they mentioned. Change its status line to `Status: filled in on <date>`.
-- `context/priorities.md`: only if they volunteer what matters most right now, without you asking for it separately. Change its status line to `Status: filled in on <date>`.
+- `context/business.md`: what the business does, who for, and anything else they mentioned. Change its status line to `Status: filled in on <date>`.
+- `context/priorities.md`: only if they volunteer what matters most right now, in the light of their goal, without you asking for it separately. Change its status line to `Status: filled in on <date>`.
 
 ## 4. Make the app look like their business
 

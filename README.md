@@ -43,7 +43,7 @@ Both sides: **keep your choices** (scan again any time and it keeps the tags, gr
 ## What you need
 
 - **The Claude desktop app** (setup runs in its Code tab).
-- **A paid Claude plan (Pro or Max)**, signed in to the desktop app.
+- **A paid Claude plan (Pro, Max, Team or Enterprise)**, signed in to the desktop app. On Team and Enterprise, your administrator may need to approve connections, and the screens may look a little different.
 - Nothing else to install in most cases. The app runs on your own computer using Node (Claude installs it for you if it's missing, with your permission). If there's no Node, both scans work with Python 3 instead.
 - About 20 minutes, once.
 
