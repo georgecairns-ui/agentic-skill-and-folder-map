@@ -26,7 +26,7 @@ Use the real numbers from your own scans, never this example. Then, in one line 
 
 - **Anything still waiting.** List every `waiting` connection with the one thing to do next: "Microsoft 365 is waiting on your IT team to approve it. When they have, press Finish connecting on Home, or tell me, and I'll read its last 30 days then."
 - **Files you said you'd share.** List any still `to find` in `setup/progress.md`, by name.
-- **Joining up the rest.** If they named something they already use (`setup/first-questions.md`, question 5) that this tool doesn't connect, or anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link next to each one.
+- **Joining up the rest.** If they named something they already use (`setup/first-questions.md`, question 6) that this tool doesn't connect, or anything is `no-connector` or `export-only`, say once: "Want these joined up with something you already use? Book a call with Joey or George," with the booking link from `apps/shared/catalogue.json`. The Connections box on Home has the same link.
 
 Then tell them, briefly:
 

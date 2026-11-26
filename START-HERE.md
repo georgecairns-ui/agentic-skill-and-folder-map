@@ -1,6 +1,6 @@
 # Start here
 
-> **If you're a person reading this:** you don't need to do anything in this file. Open this folder in the Claude desktop app (the Code tab). Setup starts on its own; if it doesn't, type **/setup** (or say "set me up"). Claude scans your computer for every skill Claude can use, scans the folders you choose, asks a few quick questions about your business, matches the app to your brand, then groups your skills and shows you what's missing. Most people are done in about 20 minutes. The first time you open the folder, the app asks whether you trust it: choose **Yes, I trust this folder**. That lets Claude run the scans and update your maps and notes without asking every time; it still can't edit a skill, a file or a folder, or send anything anywhere.
+> **If you're a person reading this:** you don't need to do anything in this file. Open this folder in the Claude desktop app (the Code tab) and type anything, even "hello". Setup starts from there. (Or type **/setup**.) Claude scans your computer for every skill Claude can use, scans the folders you choose, asks a few quick questions about your business, matches the app to your brand, then groups your skills and shows you what's missing. Most people are done in about 20 minutes. The first time you open the folder, the app asks whether you trust it: choose **Yes, I trust this folder**. That lets Claude run the scans and update your maps and notes without asking every time; it still can't edit a skill, a file or a folder, or send anything anywhere.
 
 ---
 
@@ -54,7 +54,7 @@ This folder is their workspace from now on: `context/` holds what you know about
 
 | Step | File | What happens | Their time |
 |---|---|---|---|
-| 1 | `setup/skill-map-01-first-scan.md` | `setup/first-questions.md` first (their plan, files, what they already use, their goal, then you look for the rest yourself and show them what you found), then scan every skill, open the app, tell them what was found | 5 min |
+| 1 | `setup/skill-map-01-first-scan.md` | `setup/first-questions.md` first (their name, business and website, their plan, files, what they already use, their goal, then you look for the rest yourself and show them what you found), then scan every skill, open the app, tell them what was found | 5 min |
 | 2 | `setup/skill-map-03-map-your-folders.md` | Scan the folders they choose, tell them what was found | 4 min |
 | 3 | `setup/05-get-to-know-the-business.md` | A short chat about the business, filling `context/business.md`, then matching the app to their brand | 5 min |
 | 4 | `setup/skill-map-02-group-by-business.md` | Group every skill by what it does, and show them the Gaps page | 4 min |

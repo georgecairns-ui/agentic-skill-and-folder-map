@@ -4,7 +4,7 @@ Goal: find every skill Claude can use on their computer and let them see the map
 
 ## 1. The first questions
 
-First, follow `setup/first-questions.md`: the talking tip, the first questions (their computer, Claude plan, where their files are, what they already use, and their goal; this tool connects no email, so it leaves out the email question), then look for what you need yourself and show them what you found. In this tool, that look reads their website, the apps this session is already connected to, and the names of files and folders in the folders they named: never open a file in their folders unless they hand you that one file themselves (`setup/first-questions.md`, section 4). The folders they named are the start of step 2's list. Then go on to the scan below.
+First, follow `setup/first-questions.md`: the talking tip, the first questions (their name, business and website, their computer, Claude plan, where their files are, what they already use, and their goal; this tool connects no email, so it leaves out the email question), then look for what you need yourself and show them what you found. In this tool, that look reads their website, the apps this session is already connected to, and the names of files and folders in the folders they named: never open a file in their folders unless they hand you that one file themselves (`setup/first-questions.md`, section 4). The folders they named are the start of step 2's list. Then go on to the scan below.
 
 ## 2. Tell them what's about to happen
 
