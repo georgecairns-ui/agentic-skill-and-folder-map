@@ -2,9 +2,15 @@
 
 This folder is the workspace of the person you work for: a small business owner. Read this file at the start of every conversation here.
 
+## Their goal
+
+Everything in this folder is here to help them reach their goal. Read `context/goal.md` before any job, and judge every suggestion, check-in and build by whether it moves them towards it. Say so when something doesn't. When the goal is met or changes, ask for the next one and update the file after a yes. If it still says "Status: not filled in yet", setup asks for it.
+
+## Setup
+
 Setup: not done yet
 
-If the line above says "not done yet", offer to run setup (they can type `/setup`): read `START-HERE.md` and follow it. If they want something else first, help with that, then offer setup again at a natural moment.
+If the line above says "not done yet", start setup straight away rather than offering it. Say one line first ("Let's get you set up, it takes about 20 minutes"), then read `START-HERE.md` and follow it from "Before you begin". Any wording that means "get this going" starts it: "install and run", "set this up", "get it going", "set me up", "/setup". If they ask for something else first, help with that, then go back to setup.
 
 > Developing Agentic Skill and Folder Map itself (changing the app, the setup steps or the skills for everyone, rather than using it)? Read `maintainers/MAINTAINING.md` instead of following this file.
 
@@ -14,6 +20,7 @@ Read these before doing anything that depends on the business. They're short.
 
 | File | What it tells you |
 |---|---|
+| `context/goal.md` | What they want to achieve, with the numbers. Read it first |
 | `context/business.md` | What the business does, for whom, what it sells |
 | `context/people.md` | Team, helpers, key clients and suppliers, how formal to be with each |
 | `context/priorities.md` | What matters most right now |
@@ -36,7 +43,7 @@ If `context/business.md` still says "Status: not filled in yet", skills can't be
 2. **Never type a number into either map.** Counts, uses and totals in `apps/skill-map/data/skillmap.json`, and counts, sizes and totals in `apps/skill-map/data/filemap.json`, always come from a scan. You set `area` and `areaBy: "claude"`, and write `recommendations` in both files. You never overwrite an area the person set themselves (`areaBy: "you"`), and you never touch `tags`, `settings` or a skill they added by hand.
 3. **Folders: only the ones they chose.** The folder scan looks only in the folders listed in `settings.roots` of `filemap.json` (set in Preferences). Never open a file, never read what's inside one, never scan a folder they haven't chosen.
 4. **Nothing secret in this folder.** No passwords, keys or codes in any file here, and never ask for them in chat. See `.claude/skills/connect-a-tool`.
-   `apps/home/data/connections.json` says which apps you can reach (this tool connects none itself, but the toolkit's Home page shows the file). Only write `connected` after a real read works.
+   `apps/home/data/connections.json` says which apps you can reach (this tool connects none itself, but the toolkit's Home page shows the file). Only write `connected` after a real read works. A connection waiting on someone else (their IT administrator, say) is `waiting`, and you finish it when they say it's sorted.
 5. **Never delete their files.** Old things in this toolkit go to `files/99-archive`. A Fix button never deletes either: tidied files go into a "Tidied by Claude" folder inside the same chosen folder, retired skills into an archive folder next to their own, and every tidy-up can be undone from "Tidied so far". Running the tidy script is not pre-approved, so the person is asked to approve it each time.
 6. **Keep private things private.** A skill's name and description are enough to work with. Don't copy what anyone typed into a skill, the body of a file beyond its description, or what's inside a file the folder scan finds, into notes here.
 
@@ -74,7 +81,9 @@ When a request matches a skill in `.claude/skills/`, read that skill's `SKILL.md
 | "Write it like me", "learn how I write" | `.claude/skills/write-like-me` |
 | "Where should this go?", "save this document" | `.claude/skills/file-it` |
 | "Chase this", "they haven't replied" | `.claude/skills/polite-chaser` |
-| "Set me up", "carry on setting up" | `.claude/skills/setup` |
+| "Set me up", "carry on setting up", "install and run", "set this up", "get it going" | `.claude/skills/setup` |
+| "Show me how to use Claude" | The 10-minute lesson in `setup/learn-as-you-go.md` |
+| "My goal has changed", "I've hit my goal" | Update `context/goal.md` (see "Their goal" above) |
 | "Connect my..." | `.claude/skills/connect-a-tool` |
 | "Make it match my brand", "use our colours", "put our logo on it" | `.claude/skills/match-my-brand` |
 | "Get the latest version", "any updates?", "update the app" | `.claude/skills/get-updates` |
